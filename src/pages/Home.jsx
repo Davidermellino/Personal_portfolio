@@ -87,7 +87,7 @@ function Home() {
                 variants={itemVariants}
               >
                 <img 
-                  src="./src/assets/profile_img.png" 
+                  src="src/assets/profile_img.png" 
                   alt="Data Scientist Profile" 
                   className="profile-image"
                 />
