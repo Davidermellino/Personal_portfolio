@@ -1,0 +1,215 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #6366F1;
+  --primary-light: #818CF8;
+  --primary-dark: #4F46E5;
+  
+  --secondary-color: #22D3EE;
+  --secondary-light: #A5F3FC;
+  --secondary-dark: #0891B2;
+  
+  --accent-color: #F97316;
+  --accent-light: #FB923C;
+  --accent-dark: #C2410C;
+  
+  --success-color: #10B981;
+  --warning-color: #F59E0B;
+  --error-color: #EF4444;
+  
+  --light-bg: #F9FAFB;
+  --light-card: #FFFFFF;
+  --light-text: #1F2937;
+  --light-text-secondary: #6B7280;
+  --light-border: #E5E7EB;
+  
+  --dark-bg: #1F2937;
+  --dark-card: #374151;
+  --dark-text: #F3F4F6;
+  --dark-text-secondary: #D1D5DB;
+  --dark-border: #4B5563;
+  
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  
+  --border-radius-sm: 0.25rem;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 1rem;
+  
+  --transition-speed: 0.3s;
+  
+  /* Font sizes */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fs-4xl: 2.25rem;
+  --fs-5xl: 3rem;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Theme settings */
+body.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+  }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-4);
+}
+
+h1 {
+  font-size: var(--fs-5xl);
+}
+
+h2 {
+  font-size: var(--fs-4xl);
+}
+
+h3 {
+  font-size: var(--fs-3xl);
+}
+
+h4 {
+  font-size: var(--fs-2xl);
+}
+
+h5 {
+  font-size: var(--fs-xl);
+}
+
+h6 {
+  font-size: var(--fs-lg);
+}
+
+p {
+  margin-bottom: var(--spacing-4);
+}
+
+/* Section styling */
+section {
+  padding: var(--spacing-16) 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: var(--spacing-12);
+}
+
+.heading-line {
+  height: 4px;
+  width: 80px;
+  background-color: var(--primary-color);
+  margin: var(--spacing-4) auto var(--spacing-8);
+  border-radius: var(--border-radius);
+}
+
+.lead {
+  font-size: var(--fs-xl);
+  font-weight: 300;
+}
+
+/* Button styling (augments Bootstrap) */
+.btn {
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--fs-4xl);
+  }
+  
+  h2 {
+    font-size: var(--fs-3xl);
+  }
+  
+  h3 {
+    font-size: var(--fs-2xl);
+  }
+  
+  .section-heading {
+    margin-bottom: var(--spacing-8);
+  }
+}
