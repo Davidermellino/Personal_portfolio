@@ -2,6 +2,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import profile_image from '../../public/assets/profile_img.png'
 
 function Home() {
   const socialLinks = [
@@ -87,7 +88,7 @@ function Home() {
                 variants={itemVariants}
               >
                 <img 
-                  src="public/assets/profile_img.png" 
+                  src={profile_image} 
                   alt="Data Scientist Profile" 
                   className="profile-image"
                 />
