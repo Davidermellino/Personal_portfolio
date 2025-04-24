@@ -4,15 +4,22 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import ProjectCard from '../components/ProjectCard'
 
+// Importazione delle immagini
+import guiRefImg from '../../public/assets/projects_imgs/GUI_ref.png'
+import ur5ProjectImg from '../../public/assets/projects_imgs/Ur5_project.jpeg'
+import dastgamesImg from '../../public/assets/projects_imgs/dastgames.png'
+import diabetesPredictorImg from '../../public/assets/projects_imgs/diabetes_predictor.png'
+import froggerImg from '../../public/assets/projects_imgs/frogger.png'
+
 function Projects() {
   const [filter, setFilter] = useState('all')
   
   const projects = [
     {
       id: 1,
-      title: 'Research Tool for Automatic References Generation',
+      title: 'GUI for a Research Tool for Automatic References Generation',
       description: 'Collaborated with a professor and his team to develop a GUI and some backend for a research tool that automatically generates references from a given text. The project uses JavaScript and Python to implement the tool\'s functionality.',
-      image: 'public/assets/projects_imgs/GUI_ref.png',
+      image: guiRefImg,
       technologies: ['JavaScript', 'Python'],
       github: 'https://github.com/Davidermellino'
     },
@@ -20,7 +27,7 @@ function Projects() {
       id: 2,
       title: 'Universal Robot UR5 Movement Management',
       description: 'Working alongside two PhD researchers on a project involving the Universal Robot UR5. I am focusing on managing the robot\'s movements using Python. The tasks include detecting and tracing stains on a pizza box with a camera, converting the points into robot-specific coordinates, and programming the UR5 robot to outline the shape with a marker.',
-      image: 'public/assets/projects_imgs/Ur5_project.jpeg',
+      image: ur5ProjectImg,
       technologies: ['Python'],
       github: 'https://github.com/Davidermellino'
     },
@@ -28,7 +35,7 @@ function Projects() {
       id: 3,
       title: 'DastGames - Interactive Platform for Game Exploration',
       description: 'An interactive platform developed during the React Masterclass at Aulab. It offers an immersive environment to explore a wide list of games, search for favorites, and access detailed information on each game.',
-      image: 'public/assets/projects_imgs/dastgames.png',
+      image: dastgamesImg,
       technologies: ['React', 'JavaScript'],
       github: 'https://github.com/Davidermellino/dastGames',
       demo: 'https://dast-games.vercel.app/'
@@ -37,7 +44,7 @@ function Projects() {
       id: 4,
       title: 'Diabetes Predictor',
       description: 'A collection of classification models designed to predict diabetes risk using health indicator data. The project features various classifiers—including both custom implementations and scikit-learn models—along with scripts for data analysis, preprocessing, and hyperparameter tuning.',
-      image:'public/assets/projects_imgs/diabetes_predictor.png',
+      image: diabetesPredictorImg,
       technologies: ['Python', 'ML'],
       github: 'https://github.com/Davidermellino/DiabetesPredictor'
     },
@@ -45,7 +52,7 @@ function Projects() {
       id: 4,
       title: 'Frogger Resurrection',
       description: 'Variant of the game frogger written in C with sockets. One version with thread and another one with processes',
-      image:'public/assets/projects_imgs/frogger.png',
+      image: froggerImg,
       technologies: ['C'],
       github: 'https://github.com/LucaAgus/Project_SOPR'
     }
