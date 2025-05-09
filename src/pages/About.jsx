@@ -72,7 +72,7 @@ function About() {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/src/assets/cv_davide_ermellino_english.pdf';
+    link.href = 'public/assets/cv_davide_ermellino_english.pdf';
     link.download = 'cv_davide_ermellino_english.pdf';
     document.body.appendChild(link);
     link.click();
